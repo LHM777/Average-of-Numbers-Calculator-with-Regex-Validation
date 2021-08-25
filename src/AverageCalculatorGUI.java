@@ -208,15 +208,26 @@ public class AverageCalculatorGUI extends javax.swing.JFrame {
 
     private void calculateButtonClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_calculateButtonClicked
         
+		
+		
+		
+		// First, it will store the contents of the JTextArea into String called 'contents'.
         String contents = jTextArea1.getText();
-        //System.out.println(validateJTextArea(contents));
         
+		
+		
+	
+		/*
+		If the validation returns true:
+		If the validation is successful, it will set the jLabel10.text to empty string. The jLabel10 will eventually store the average result as a string and will be displayed to the user. We will also need to extract the numbers from the string input so that we can perform calculation on them. We extract the numbers from the string input using the extractInt() method which we will explain later. The extractInt() can extract integers(positive and negative) and decimals. After extracting the numbers, it will then store them in a String array. We use the built-in split() method of String in order to split the original input further and store each individual string numbers to the String array. We use the whitespace value for splitting the input string into array. After getting the String array, we will then convert the string numbers into double and store them in an arrayList. After we have our arrayList, we are finally ready to calculate the average/mean. We use the calculateAverage() method for calculating the average and storing the result in the 'average' variable of type double. We use BigDecimal for formatting the result. We use BigDecimal to set how many decimal places to round our result to and to also set the RoundingMode. jLabel7 will display the total numbers. It determines the total numbers of the input using the built-in size() method of the ArrayList. jLabel9 will display the average/mean. It will display the average/mean using the built-in toPlainString() method of the BigDecimal.
+		*/
+		
         if(validateJTextArea(contents)){
         
-            //System.out.println("True");
-            jLabel10.setText("");
+            
+            
             String str = extractInt(contents);
-            //System.out.println(str);
+            
             
             String s[] = str.split(" ");
             ArrayList<Double> a = new ArrayList<>(s.length);
@@ -235,17 +246,17 @@ public class AverageCalculatorGUI extends javax.swing.JFrame {
             jLabel7.setText(Integer.toString(a.size()));
             jLabel9.setText(bd.toPlainString());
                     
-            /*
-            for(Double x:a) {
-                System.out.println(x);
-            }
-            */
+
 
             
         }
         else{
         
-            //System.out.println("False");
+            /*
+			If the validation returns false:
+			If the validation is unsuccessful, we will inform the user to check his input. We show that warning using jLabel10. We will the set jLabel7, jLabel8, and jLabel9 to empty strings. jLabel7, jLabel8, and jLabel9 are used for displaying the total numbers, the sum, and the average respectively.
+		    */
+		
             jLabel10.setText("Pls. Check your input");
             jLabel7.setText("");
             jLabel8.setText("");
