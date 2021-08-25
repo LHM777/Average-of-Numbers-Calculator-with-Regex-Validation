@@ -374,6 +374,15 @@ public class AverageCalculatorGUI extends javax.swing.JFrame {
     
     private String extractInt(String str){
     
+	
+		// This method is used to extract the numbers from the string input.
+		// It can extract integers(positive and negative) and decimals.
+		// After extracting the numbers, it will then use the built-in trim() method 
+		// of String to delete any leading and trailing whitespaces and returns 
+		// the result as a String.
+		
+		
+		
         str = str.replaceAll("\\n+", " ");
         str = str.replaceAll("\\,+", " ");
         str = str.replaceAll("\\s+", " ");
