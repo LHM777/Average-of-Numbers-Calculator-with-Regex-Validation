@@ -271,6 +271,14 @@ public class AverageCalculatorGUI extends javax.swing.JFrame {
     
     private double calculateAverage(ArrayList<Double> arrayList){
     
+		// We use the calculateAverage() method to calculate the average and return the result as a double.
+		// It takes an ArrayList of Double as a parameter.
+		// It has a variable called 'total' of type double. This variable will store the sum of all the numbers.
+		// It uses a for-each loop to loop through the entire arraylist and to add the numbers to together and store them in the total variable.
+		// It uses jLabel8 to display the total to the user.
+		// And finally, to get the average, it divides the total by the arrayList size.
+		
+		
         double total = 0;
         
         for(double x:arrayList){
