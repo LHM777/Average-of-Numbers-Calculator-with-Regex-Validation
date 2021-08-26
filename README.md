@@ -176,3 +176,18 @@ private boolean validateJTextArea(String content){
         
     }
 ```
+
+
+
+# Examples
+
+![Untitled](https://user-images.githubusercontent.com/86467782/130931408-c37c39a5-2abc-4f53-b2fa-6a07984868d0.png)
+
+![Untitled2](https://user-images.githubusercontent.com/86467782/130931526-fc6ee5d2-3154-411b-b93d-3852e2ad6b7d.png)
+
+![Untitled3](https://user-images.githubusercontent.com/86467782/130931684-836e7499-11ef-440d-b8ae-8cec6766a0e5.png)
+
+![Untitled4](https://user-images.githubusercontent.com/86467782/130931797-b5b6198d-019d-40ba-ac19-bcb4779245b7.png)
+
+![Untitled5](https://user-images.githubusercontent.com/86467782/130931930-1f0b6345-4ba0-4455-af29-c6807b8aadc4.png)
+
