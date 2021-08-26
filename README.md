@@ -91,3 +91,88 @@ jLabel7, jLabel8, and jLabel9 are used for displaying the total numbers, the sum
         
 }
 ```
+
+
+
+# Input Validation
+
+```java
+private boolean validateJTextArea(String content){
+    
+        
+   // The validateJTextArea() method is used for validating user input. 
+   // It uses REGEX to validate the input.
+   // Some examples of inputs that are accepted by the REGEX are listed below.
+   // This method will return true if the input is accepted and false if it isn't.
+		
+		
+   /*
+     Test values:
+      , ,1, ,, ,  2 3, 4, 5,6, ,
+      , ,1, ,, ,  2 3,a 4, 5,6, ,
+      , ,00000.00000, ,, ,  .12345 -.12345, 0.12345, 00000.12345,-12345.12345, ,-12,345.12345 , ,123123123.12345, ,, ,  12345.12345  1000, 1000, ,-50,-50.12345
+   */
+
+
+    /*
+			
+    REGEX EXPLANATION:
+			
+    (\\,*\\s*\\n*)*
+    - The '*' indicates that the pattern can occur 0 or more times.
+    - \\,* means 0 or more commas.
+    - \\s* means 0 or more whitespaces.
+    - \\n* means 0 or more newlines.
+    - They can occur in any order.
+    - (\\,*\\s*\\n*)* Combined together, they create a single REGEX pattern that can occur 0 or more times.
+    - (\\,*\\s*\\n*)* can occur before a number or after a number.
+			
+			
+			
+     \\-?\\d*(\\.\\d+)?
+     - The '?' indicates that the pattern can occur once or not at all. 
+     - The '+' indicates 1 or more times.
+     - \\-? means that a negative sign can occur once or not at all.
+     - \\d* means that a digit can occur 0 or more times.
+     - \\-?\\d* REGEX for a number with negative sign or just a number without the negative sign.
+			
+     - \\-?\\d* This REGEX pattern means that you can even omit both the negative sign and the number 
+	leaving you only with the dot followed by the decimal digits (e.g. .12345)
+			   
+     - (\\.\\d+)? REGEX for a dot followed by a single or more digit (e.g. .12345). This whole pattern can occur once or not at all.
+     - \\-?\\d*(\\.\\d+)? Altogether, this REGEX can accept negative numbers and decimal numbers.
+     - \\-?\\d*(\\.\\d+)? This REGEX can accept even just a dot followed by decimal numbers without the whole number part.
+     - \\-?\\d*(\\.\\d+)? Finally, this pattern can also accept this input '-.12345'. A negative sign followed by a dot and the 
+	decimal digits.
+			
+			
+			
+     ((\\,+|\\s+|\\n+)\\-?\\d*(\\.\\d+)?)+
+     - The '|' is the symbol for the conditional OR.
+     
+     - (\\,+|\\s+|\\n+) means a comma that occurs 1 or more time or
+       a whitespace that occurs 1 or more time or a newline that occurs 
+       1 or more time. We use '+' here because it is required that the numbers 
+       be separated by commas and whitespaces or even newlines. They can occur in 
+       any order.
+			  
+     - \\-?\\d*(\\.\\d+)? This bit right here has already been explained above.
+			
+     - ((\\,+|\\s+|\\n+)\\-?\\d*(\\.\\d+)?)+ Altogether, This whole pattern 
+       will accept commas, whitespaces and newlines that can occur in any order followed by 
+       numbers(negative or positive) or numbers with decimals or numbers with only a dot followed by 
+       decimal digits without the whole number part.
+			  
+			  
+			  
+			  
+      (\\,*\\s*\\n*)*
+      - This bit right here was already explained above.
+      - It can occur at the start or end of a number or numbers.
+			  
+     */
+        
+     return Pattern.matches("(\\,*\\s*\\n*)*\\-?\\d*(\\.\\d+)?((\\,+|\\s+|\\n+)\\-?\\d*(\\.\\d+)?)+(\\,*\\s*\\n*)*", content);
+        
+    }
+```
