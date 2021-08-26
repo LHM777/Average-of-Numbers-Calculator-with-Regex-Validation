@@ -27,8 +27,6 @@ String contents = jTextArea1.getText();
 	
 /*
 If the validation returns true:
-If the validation is successful, it will set the jLabel10.text to empty string. 
-The jLabel10 will eventually store the average result as a string and will be displayed to the user. 
 We will also need to extract the numbers from the string input so that we can perform calculation on them. 
 We extract the numbers from the string input using the extractInt() method which we will explain later. 
 The extractInt() can extract integers(positive and negative) and decimals. 
@@ -78,7 +76,7 @@ else{
 /*
 If the validation returns false:
 If the validation is unsuccessful, we will inform the user to check his input. We show that warning using jLabel10. 
-We will the set jLabel7, jLabel8, and jLabel9 to empty strings. 
+We will then set jLabel7, jLabel8, and jLabel9 to empty strings. 
 jLabel7, jLabel8, and jLabel9 are used for displaying the total numbers, the sum, and the average respectively.
 */
 		
