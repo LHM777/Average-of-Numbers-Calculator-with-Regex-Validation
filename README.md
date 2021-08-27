@@ -189,3 +189,32 @@ private boolean validateJTextArea(String content){
 
 ![Untitled5](https://user-images.githubusercontent.com/86467782/130931930-1f0b6345-4ba0-4455-af29-c6807b8aadc4.png)
 
+
+
+
+# Calculation
+
+```java
+
+    private double calculateAverage(ArrayList<Double> arrayList){
+    
+		// We use the calculateAverage() method to calculate the average and return the result as a double.
+		// It takes an ArrayList of Double as a parameter.
+		// It has a variable called 'total' of type double. This variable will store the sum of all the numbers.
+		// It uses a for-each loop to loop through the entire arraylist and to add the numbers to together and store them in the total variable.
+		// It uses jLabel8 to display the total to the user.
+		// And finally, to get the average, it divides the total by the arrayList size.
+		
+		
+        double total = 0;
+        
+        for(double x:arrayList){
+        
+            total = total + x;
+        }
+        
+        jLabel8.setText(String.valueOf(total));
+        return total / arrayList.size();
+    }
+```
+
