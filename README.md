@@ -1,3 +1,13 @@
+# Table of Contents
+- [Average of Numbers Calculator](#average-of-numbers-calculator-with-regex-validation)
+- [User Interface](#user-interface)
+- [calculateButton](#calculatebutton-onclick-handler)
+- [Input Validation](#input-validation)
+- [Examples](#examples)
+- [Calculation](#calculation)
+
+
+
 # Average of Numbers Calculator with Regex Validation
 This calculator was built using Java Swing. Use this calculator to find the average or mean of a data set. Enter values separated by commas or spaces.
 
